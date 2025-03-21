@@ -20,7 +20,7 @@ jobs:
         with:
           context: ./src
           push: true
-          tags: naelly/fake-shop-desafio:1.0.0
+          tags: naelly/fake-shop-desafio:v${{ github.run_number }}
 
   CD:
     needs: [CI]

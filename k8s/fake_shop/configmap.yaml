@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fakeshop-secret
+  labels:
+    app: fakeshop
+data:
+  DB_HOST: postgres.postgres.svc
+  DB_USER: ps_user
+  DB_PASSWORD: SecurePassword
+  DB_NAME: ps_db
+  DB_PORT: "5432"
+  FLASK_APP: index.py

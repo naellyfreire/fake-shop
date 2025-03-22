@@ -37,16 +37,13 @@ jobs:
       - name: 'Kustomize Build'
         uses: karancode/kustomize-github-action@master
         with:
-          kustomize_version: '3.0.0'
+          kustomize_version: '5.4.3'
           kustomize_build_dir: 'k8s/fake_shop'
-          kustomize_comment: true
-          kustomize_output_file: "fake_shop.yaml"
-          kustomize_build_options: "--load_restrictor none"
-          enable_alpha_plugins: true
+          kustomize_output_file: "fakeshop.yaml"
       - uses: Azure/k8s-deploy@v5
         with:
           namespace: 'fakeshop'
           manifests: |
-                  fake_shop.yaml
+                  fakeshop.yaml
           images: |
             naelly/fake-shop-desafio:${{ github.run_number }}.0.0

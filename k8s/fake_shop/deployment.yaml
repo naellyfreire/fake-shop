@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: fakeshop
-          image: 'naelly/fake-shop-desafio:1.0.0'
+          image: 'naelly/fake-shop-desafio:6.0.0'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
